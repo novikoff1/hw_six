@@ -1,1 +1,1 @@
-#TutorialDjango
+#Домашка в pools/management/commands
