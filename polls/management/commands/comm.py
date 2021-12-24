@@ -22,6 +22,10 @@ class Commands(BaseCommand):
         total = kwargs['total']
         faker = Faker()
         for i in range(total):
-            User.objects.create_user(username=faker.name(),
-                                     email=faker.email(),
-                                     password=password())
+
+            try:
+                User.objects.create_user(username=faker.name(),
+                                         email=faker.email(),
+                                         password=password())
+            except 11 < total < 0:
+                raise ValueError
